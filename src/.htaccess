@@ -1,8 +1,0 @@
-Options +MultiViews
-
-RewriteEngine On
-
-
-### --rewrite rules to strip html extension -LL --
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
