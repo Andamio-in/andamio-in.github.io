@@ -95,7 +95,7 @@ function sass() {
 
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
-    .pipe($.sass({
+    .pipe($.sass.sync({
       includePaths: PATHS.sass
     })
       .on('error', $.sass.logError))
