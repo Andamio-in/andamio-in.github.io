@@ -30,7 +30,7 @@ jobs:
           node-version: 14.21.3
           cache: 'npm'
     - run: |
-        npm ci
+        npm i
         npm run build
     
     - name: Upload artifact
