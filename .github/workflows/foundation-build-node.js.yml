@@ -14,6 +14,11 @@ jobs:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
 
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write
+      contents: write
+
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v4
@@ -31,5 +36,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist # The folder the action should deploy.
+        branch: gh-pages
 
     #TODO: Add a step for upload dist folder to GH pages... L.
